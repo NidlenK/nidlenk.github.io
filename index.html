@@ -111,45 +111,42 @@
         margin: 0;
         font-size: clamp(32px, 5vw, 56px);
       }
-
       @media (max-width: 600px) {
-       .hero {
-  min-height: 100svh;
-  padding: 16px;
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(8, 8, 10, 0.18) 0%,
-      rgba(8, 8, 10, 0.38) 58%,
-      rgba(8, 8, 10, 0.78) 100%
-    ),
-    url("Robot Web Mobile.png");
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  .hero {
+    min-height: 100svh;
+    padding: 16px;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(8, 8, 10, 0.18) 0%,
+        rgba(8, 8, 10, 0.38) 58%,
+        rgba(8, 8, 10, 0.78) 100%
+      ),
+      url("robot-twitch-mobile.jpeg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .panel,
+  .section__content {
+    padding: 24px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .section {
+    min-height: auto;
+    padding: 56px 16px;
+  }
 }
-        }
-
-        .buttons {
-          display: grid;
-          grid-template-columns: 1fr;
-        }
-
-        .button {
-          text-align: center;
-        }
-
-        .section {
-          min-height: auto;
-          padding: 56px 16px;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
     </style>
   </head>
 
