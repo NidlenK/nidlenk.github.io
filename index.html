@@ -5,21 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>NidlenK — 3D Artist</title>
-    <meta
-      name="description"
-      content="3D portfolio of NidlenK — Blender artist creating hard-surface props, melee weapons, jewelry, and experimental 3D projects."
-    />
 
     <style>
-      :root {
-        --background: #101012;
-        --panel: rgba(15, 15, 18, 0.82);
-        --text: #f5f2f2;
-        --muted: #c3baba;
-        --accent: #ff5f58;
-        --accent-dark: #a51c22;
-      }
-
       * {
         box-sizing: border-box;
       }
@@ -31,137 +18,123 @@
       body {
         margin: 0;
         min-width: 320px;
-        color: var(--text);
-        background: var(--background);
+        background: #101012;
+        color: #f5f2f2;
         font-family: Arial, Helvetica, sans-serif;
       }
 
       .hero {
-        min-height: 100svh;
-        display: grid;
-        place-items: end start;
-        padding: 32px 20px;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        padding: 24px;
         background:
           linear-gradient(
             90deg,
-            rgba(8, 8, 10, 0.76) 0%,
-            rgba(8, 8, 10, 0.28) 65%,
-            rgba(8, 8, 10, 0.52) 100%
+            rgba(8, 8, 10, 0.78),
+            rgba(8, 8, 10, 0.24)
           ),
-          url("Robot-Tvich-Cycles.jpg") center / cover no-repeat;
+          url("Robot Twitch Cycles.png") center / cover no-repeat;
       }
 
-      .hero__content {
-        width: min(100%, 650px);
-        padding: clamp(24px, 5vw, 56px);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-radius: 20px;
-        background: var(--panel);
-        box-shadow: 0 16px 60px rgba(0, 0, 0, 0.36);
-        backdrop-filter: blur(10px);
+      .panel {
+        max-width: 650px;
+        padding: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 18px;
+        background: rgba(15, 15, 18, 0.82);
       }
 
-      .eyebrow {
+      .label {
         margin: 0 0 12px;
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
+        color: #ff655f;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
       }
 
       h1 {
         margin: 0;
-        font-size: clamp(3rem, 10vw, 7rem);
-        line-height: 0.92;
-        letter-spacing: -0.06em;
+        font-size: clamp(48px, 10vw, 110px);
+        line-height: 0.95;
       }
 
-      .intro {
-        max-width: 48ch;
-        margin: 22px 0 0;
-        color: var(--muted);
-        font-size: clamp(1rem, 2.3vw, 1.25rem);
-        line-height: 1.65;
+      p {
+        max-width: 520px;
+        margin: 20px 0 0;
+        color: #d0c8c8;
+        font-size: 18px;
+        line-height: 1.6;
       }
 
-      .actions {
+      .buttons {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        margin-top: 28px;
+        margin-top: 26px;
       }
 
       .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 46px;
+        display: inline-block;
         padding: 12px 18px;
-        border: 1px solid var(--accent);
+        border: 1px solid #ff655f;
         border-radius: 10px;
-        color: var(--text);
-        font-weight: 700;
+        color: #f5f2f2;
+        font-weight: bold;
         text-decoration: none;
-        transition: transform 0.2s ease, background-color 0.2s ease;
       }
 
-      .button:hover {
-        transform: translateY(-2px);
-        background: rgba(255, 95, 88, 0.15);
+      .button--main {
+        background: #ff655f;
+        color: #201010;
       }
 
-      .button--primary {
-        color: #1a0d0d;
-        background: var(--accent);
-      }
-
-      .button--primary:hover {
-        background: #ff817a;
-      }
-
-      .preview {
-        display: grid;
-        min-height: 45svh;
-        place-items: center;
-        padding: 64px 20px;
-        text-align: center;
+      .section {
+        min-height: 55vh;
+        padding: 72px 24px;
         background:
-          radial-gradient(circle at 50% 0%, rgba(255, 95, 88, 0.2), transparent 48%),
+          radial-gradient(circle at top center, rgba(255, 101, 95, 0.16), transparent 48%),
           #141416;
       }
 
-      .preview h2 {
-        margin: 0;
-        font-size: clamp(2rem, 6vw, 4rem);
+      .section__content {
+        width: min(100%, 900px);
+        margin: 0 auto;
+        padding: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        background: rgba(15, 15, 18, 0.78);
       }
 
-      .preview p {
-        max-width: 52ch;
-        margin: 16px 0 0;
-        color: var(--muted);
-        line-height: 1.65;
+      h2 {
+        margin: 0;
+        font-size: clamp(32px, 5vw, 56px);
       }
 
       @media (max-width: 600px) {
         .hero {
-          align-items: end;
           padding: 16px;
           background-position: 42% center;
         }
 
-        .hero__content {
-          padding: 28px 22px;
-          border-radius: 16px;
+        .panel,
+        .section__content {
+          padding: 24px;
         }
 
-        .actions {
+        .buttons {
           display: grid;
           grid-template-columns: 1fr;
         }
 
         .button {
-          width: 100%;
+          text-align: center;
+        }
+
+        .section {
+          min-height: auto;
+          padding: 56px 16px;
         }
       }
 
@@ -169,48 +142,46 @@
         html {
           scroll-behavior: auto;
         }
-
-        .button {
-          transition: none;
-        }
       }
     </style>
   </head>
 
   <body>
     <main>
-      <section class="hero" aria-labelledby="site-title">
-        <div class="hero__content">
-          <p class="eyebrow">3D Artist • Blender</p>
+      <section class="hero">
+        <div class="panel">
+          <p class="label">3D Artist • Blender</p>
 
-          <h1 id="site-title">NidlenK</h1>
+          <h1>NidlenK</h1>
 
-          <p class="intro">
+          <p>
             I create hard-surface props, melee weapon concepts,
             jewelry-inspired pieces, and experimental 3D projects.
           </p>
 
-          <div class="actions">
-            <a class="button button--primary" href="#works">View projects</a>
+          <div class="buttons">
+            <a class="button button--main" href="#works">View projects</a>
             <a class="button" href="#about">About me</a>
           </div>
         </div>
       </section>
 
-      <section class="preview" id="works" aria-labelledby="works-title">
-        <div>
-          <h2 id="works-title">Selected projects</h2>
+      <section class="section" id="works">
+        <div class="section__content">
+          <h2>Selected projects</h2>
+
           <p>
-            My first portfolio pieces will appear here soon.
+            My portfolio projects will appear here soon.
           </p>
         </div>
       </section>
 
-      <section class="preview" id="about" aria-labelledby="about-title">
-        <div>
-          <h2 id="about-title">About NidlenK</h2>
+      <section class="section" id="about">
+        <div class="section__content">
+          <h2>About NidlenK</h2>
+
           <p>
-            A Blender artist building a portfolio through hard-surface,
+            I am a Blender artist building a portfolio through hard-surface,
             jewelry, and experimental 3D work.
           </p>
         </div>
