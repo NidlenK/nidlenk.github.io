@@ -106,6 +106,48 @@
         border-radius: 18px;
         background: rgba(15, 15, 18, 0.78);
       }
+      .section--socials {
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 101, 95, 0.2),
+      transparent 46%
+    ),
+    #141416;
+}
+
+.socials-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 60px;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 101, 95, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.social-card__icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: #ff655f;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.social-card__name {
+  color: #f5f2f2;
+  font-size: 18px;
+  font-weight: bold;
+}
 
       h2 {
         margin: 0;
@@ -164,9 +206,9 @@
           </p>
 
           <div class="buttons">
-            <a class="button button--main" href="#works">View projects</a>
-            <a class="button" href="#about">About me</a>
-          </div>
+             <a class="button button--main" href="#works">View projects</a>
+             <a class="button" href="#socials">Find me online</a>
+        </div>
         </div>
       </section>
 
@@ -180,16 +222,35 @@
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="section__content">
-          <h2>About NidlenK</h2>
+      <section class="section section--socials" id="socials">
+  <div class="section__content">
+    <p class="label">△ Find me online</p>
 
-          <p>
-            I am a Blender artist building a portfolio through hard-surface,
-            jewelry, and experimental 3D work.
-          </p>
-        </div>
-      </section>
+    <h2>Follow my work</h2>
+
+    <p>
+      New renders, work-in-progress updates, and future projects
+      will be shared on my social platforms.
+    </p>
+
+    <div class="socials-list">
+      <div class="social-card">
+        <span class="social-card__icon" aria-hidden="true">△</span>
+        <span class="social-card__name">Instagram</span>
+      </div>
+
+      <div class="social-card">
+        <span class="social-card__icon" aria-hidden="true">△</span>
+        <span class="social-card__name">Pinterest</span>
+      </div>
+
+      <div class="social-card">
+        <span class="social-card__icon" aria-hidden="true">△</span>
+        <span class="social-card__name">Facebook</span>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   </body>
 </html>
