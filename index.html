@@ -113,14 +113,21 @@
       }
 
       @media (max-width: 600px) {
-        .hero {
-          padding: 16px;
-          background-position: 42% center;
-        }
-
-        .panel,
-        .section__content {
-          padding: 24px;
+       .hero {
+  min-height: 100svh;
+  padding: 16px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(8, 8, 10, 0.18) 0%,
+      rgba(8, 8, 10, 0.38) 58%,
+      rgba(8, 8, 10, 0.78) 100%
+    ),
+    url("robot-twitch-mobile.jpeg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
         }
 
         .buttons {
