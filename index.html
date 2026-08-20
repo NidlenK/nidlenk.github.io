@@ -130,6 +130,7 @@
 .social-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   width: 100%;
   min-height: 60px;
@@ -146,25 +147,26 @@
 }
 
 .social-card__icon {
-  display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  color: #ff655f;
-  font-size: 24px;
-  line-height: 1;
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  background: #ff655f;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }
-
+.social-card__icon--instagram {
+  -webkit-mask-image: url("icons/instagram.svg");
+  mask-image: url("icons/instagram.svg");
+}
 .social-card__name {
   color: #f5f2f2;
   font-size: 18px;
   font-weight: bold;
-}
-      .social-card__arrow {
-  margin-left: auto;
-  color: #ff655f;
-  font-size: 22px;
-  line-height: 1;
 }
 
       h2 {
@@ -296,19 +298,24 @@
 
 <div class="socials-list">
   <a
-    class="social-card"
-    href="ССЫЛКА_НА_ИНСТАГРАМ"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Visit NidlenK on Instagram"
-  >
-    <span
-      class="social-card__icon social-card__icon--instagram"
-      aria-hidden="true"
-    ></span>
-    <span class="social-card__name">Instagram</span>
-    <span class="social-card__arrow" aria-hidden="true">↗</span>
-  </a>
+  class="social-card"
+  href="https://www.instagram.com/nidlenk_niki?igsh=MTdkb2psa3l2M3plYg=="
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit NidlenK on Instagram"
+>
+  <span
+    class="social-card__icon social-card__icon--instagram"
+    aria-hidden="true"
+  ></span>
+
+  <span class="social-card__name">Instagram</span>
+
+  <span
+    class="social-card__icon social-card__icon--instagram"
+    aria-hidden="true"
+  ></span>
+</a>
 
       </div>
 
