@@ -163,6 +163,14 @@
   -webkit-mask-image: url("icons/instagram.svg");
   mask-image: url("icons/instagram.svg");
 }
+.social-card__icon--pinterest {
+  -webkit-mask-image: url("icons/pinterest.svg");
+  mask-image: url("icons/pinterest.svg");
+}
+.social-card__icon--facebook {
+  -webkit-mask-image: url("icons/facebook.svg");
+  mask-image: url("icons/facebook.svg");
+}
 .social-card__name {
   color: #f5f2f2;
   font-size: 18px;
@@ -319,15 +327,44 @@
 
       </div>
 
-      <div class="social-card">
-        <span class="social-card__icon" aria-hidden="true">△</span>
-        <span class="social-card__name">Pinterest</span>
-      </div>
+      <a
+  class="social-card"
+  href="https://ru.pinterest.com/nidlen_3d/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit NidlenK on Pinterest"
+>
+  <span
+    class="social-card__icon social-card__icon--pinterest"
+    aria-hidden="true"
+  ></span>
 
-      <div class="social-card">
-        <span class="social-card__icon" aria-hidden="true">△</span>
-        <span class="social-card__name">Facebook</span>
-      </div>
+  <span class="social-card__name">Pinterest</span>
+
+  <span
+    class="social-card__icon social-card__icon--pinterest"
+    aria-hidden="true"
+  ></span>
+</a>
+      <a
+  class="social-card"
+  href="https://www.facebook.com/share/1CT38hKCmJ/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit NidlenK on Facebook"
+>
+  <span
+    class="social-card__icon social-card__icon--facebook"
+    aria-hidden="true"
+  ></span>
+
+  <span class="social-card__name">Facebook</span>
+
+  <span
+    class="social-card__icon social-card__icon--facebook"
+    aria-hidden="true"
+  ></span>
+</a>
     </div>
   </div>
 </section>
