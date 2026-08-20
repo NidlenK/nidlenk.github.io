@@ -131,11 +131,18 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  width: 100%;
   min-height: 60px;
   padding: 14px 18px;
   border: 1px solid rgba(255, 101, 95, 0.35);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
+  color: #f5f2f2;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .social-card__icon {
@@ -290,11 +297,10 @@
   rel="noopener noreferrer"
   aria-label="Visit NidlenK on Instagram"
 >
-  <img
-    class="social-card__icon"
-    src="icons/instagram.svg"
-    alt=""
-  />
+ <span
+  class="social-card__icon social-card__icon--instagram"
+  aria-hidden="true"
+></span>
   <span class="social-card__name">Instagram</span>
 </a>
       </div>
