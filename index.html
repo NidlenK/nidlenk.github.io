@@ -101,40 +101,28 @@
         color: #201010;
       }
 
-        .section {
-        min-height: 55vh;
-        padding: 72px 24px;
-        background:
-          radial-gradient(circle at top center, rgba(255, 101, 95, 0.16), transparent 48%),
-          #141416;
-      }
-
-      .section__content {
-        width: min(100%, 900px);
-        margin: 0 auto;
-        padding: 32px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 18px;
-        background: rgba(15, 15, 18, 0.78);
-      }
-      .section--socials {
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(255, 101, 95, 0.2),
-      transparent 46%
-    ),
-    #141416;
+       .section,
+.section--socials {
+  min-height: 55vh;
+  padding: 72px 24px;
+  background: #141416;
 }
 
-.section--socials::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff453a 0%, #ff9500 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-  z-index: -1;
-  pointer-events: none;
+.section {
+  padding-bottom: 24px;
+}
+
+.section--socials {
+  padding-top: 24px;
+}
+
+.section__content {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(15, 15, 18, 0.78);
 }
 .social-card {
   margin-top: 10px;
