@@ -117,7 +117,23 @@
         background: rgba(15, 15, 18, 0.78);
       }
   .section--socials {
-  background: transparent;
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.section--socials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(255, 69, 58, 0.15) 0%,
+    rgba(255, 149, 0, 0.08) 40%,
+    transparent 70%
+  );
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  z-index: -1;
+  pointer-events: none;
 }
 .social-card {
   margin-top: 10px;
